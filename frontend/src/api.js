@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://shop-backend-2-m1cv.onrender.com/api';
 
 export const fetchProducts = async (params = {}) => {
   const query = new URLSearchParams(params).toString();

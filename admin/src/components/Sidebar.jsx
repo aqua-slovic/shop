@@ -34,7 +34,7 @@ function Sidebar({ onLogout }) {
       </nav>
 
       <div className="sidebar-footer">
-        <a href="http://localhost:3000" target="_blank" rel="noreferrer" className="sidebar-link">
+        <a href="https://shop-backend-2-m1cv.onrender.com" target="_blank" rel="noreferrer" className="sidebar-link">
           <span className="sidebar-icon">🌐</span>
           <span>View Store</span>
         </a>

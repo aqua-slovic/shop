@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api/admin';
+const API_BASE_URL = 'https://shop-backend-2-m1cv.onrender.com/api/admin';
 
 export const getDashboardStats = async () => {
   const response = await fetch(`${API_BASE_URL}/dashboard`);
@@ -47,7 +47,7 @@ export const deleteProduct = async (id) => {
 };
 
 export const getOrders = async () => {
-  const response = await fetch('http://localhost:5000/api/orders');
+  const response = await fetch('https://shop-backend-2-m1cv.onrender.com/api/orders');
   if (!response.ok) throw new Error('Failed to fetch orders');
   return response.json();
 };
