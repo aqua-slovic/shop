@@ -1,0 +1,227 @@
+.products-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.products-search {
+  padding: 10px 16px;
+  border: 2px solid var(--gray-200);
+  border-radius: 8px;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.products-search:focus {
+  border-color: var(--primary);
+}
+
+.products-toolbar > span {
+  font-size: 13px;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+.products-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th {
+  background: var(--gray-100);
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-500);
+}
+
+.products-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.products-table tbody tr:hover {
+  background: var(--gray-50);
+}
+
+.product-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-cell-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-cell-name {
+  display: block;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-sale { background: #fef3c7; color: #92400e; }
+.badge-new { background: #d1fae5; color: #065f46; }
+.badge-gold { background: #fef3c7; color: #92400e; }
+
+.table-category {
+  background: var(--light);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+.table-price .price-current {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.table-price .price-original {
+  font-size: 12px;
+  color: var(--gray-400);
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+.stock-count {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stock-good { background: #d1fae5; color: #065f46; }
+.stock-medium { background: #fef3c7; color: #92400e; }
+.stock-low { background: #fee2e2; color: #991b1b; }
+
+.status-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-in { background: #d1fae5; color: #065f46; }
+.status-out { background: #fee2e2; color: #991b1b; }
+
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.action-edit {
+  background: rgba(26, 26, 46, 0.05);
+}
+
+.action-edit:hover {
+  background: rgba(26, 26, 46, 0.1);
+}
+
+.action-delete {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.action-delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.no-results {
+  text-align: center;
+  padding: 48px;
+  color: var(--gray-500);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.modal p {
+  color: var(--gray-500);
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .products-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .products-search {
+    max-width: none;
+  }
+}

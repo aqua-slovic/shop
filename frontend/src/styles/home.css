@@ -1,0 +1,360 @@
+.hero {
+  position: relative;
+  background: var(--primary);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: url('https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&h=1000&fit=crop') center/cover no-repeat;
+  opacity: 0.15;
+  transform: scaleX(-1);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 18, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+.hero-tagline {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-family: var(--font-heading);
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 500px;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 48px;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat strong {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  font-family: var(--font-heading);
+}
+
+.hero-stat span {
+  font-size: 13px;
+  color: var(--gray-400);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Features strip */
+.features-strip {
+  background: white;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.feature-item svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.feature-item strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.feature-item span {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+/* Products grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.products-grid-small {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.section-alt {
+  background: var(--light);
+}
+
+/* Category showcase */
+.category-showcase {
+  padding: 80px 0;
+  background: var(--gray-100);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.category-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: block;
+  transition: var(--transition);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.category-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover img {
+  transform: scale(1.05);
+}
+
+.category-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+}
+
+.category-card-overlay h3 {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+
+.category-card-overlay span {
+  color: var(--gold);
+  font-size: 13px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.category-card:hover .category-card-overlay span {
+  opacity: 1;
+}
+
+/* CTA Banner */
+.cta-banner {
+  background: var(--primary);
+  padding: 80px 0;
+}
+
+.cta-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.cta-banner h2 {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.cta-banner p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  max-width: 500px;
+}
+
+/* Testimonial */
+.testimonial-section {
+  padding: 80px 0;
+  background: var(--primary);
+  text-align: center;
+}
+
+.testimonial {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.testimonial-quote {
+  font-family: var(--font-heading);
+  font-size: 72px;
+  color: var(--gold);
+  line-height: 0.5;
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: white;
+  font-size: 16px;
+}
+
+.testimonial-author span {
+  color: var(--gray-400);
+  font-size: 14px;
+}
+
+/* Newsletter */
+.newsletter-section {
+  padding: 80px 0;
+  background: var(--dark);
+}
+
+.newsletter-box {
+  text-align: center;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 480px;
+  margin: 0 auto;
+  gap: 8px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--gray-400);
+}
+
+.newsletter-form input:focus {
+  border-color: var(--gold);
+}
+
+@media (max-width: 1024px) {
+  .products-grid,
+  .products-grid-small {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+  }
+  .hero-content h1 {
+    font-size: 40px;
+  }
+  .products-grid,
+  .products-grid-small {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-stats {
+    gap: 24px;
+  }
+  .cta-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid,
+  .products-grid-small {
+    grid-template-columns: 1fr;
+  }
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-form {
+    flex-direction: column;
+  }
+}

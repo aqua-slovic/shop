@@ -1,0 +1,121 @@
+.sidebar {
+  width: 250px;
+  background: var(--dark);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  transition: var(--transition);
+}
+
+.sidebar-header {
+  padding: 32px 24px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-logo .logo-text {
+  display: block;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+.sidebar-logo .logo-sub {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--gray-400);
+  font-size: 14px;
+  font-weight: 500;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: var(--accent);
+  color: white;
+}
+
+.sidebar-icon {
+  font-size: 18px;
+  width: 24px;
+  text-align: center;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-logout:hover {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 70px;
+    align-items: center;
+  }
+  .sidebar-header {
+    padding: 20px 8px;
+  }
+  .sidebar-logo .logo-text,
+  .sidebar-logo .logo-sub {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+  .sidebar-logo .logo-sub {
+    display: none;
+  }
+  .sidebar-nav {
+    padding: 16px 8px;
+  }
+  .sidebar-link span:not(.sidebar-icon) {
+    display: none;
+  }
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+  }
+  .sidebar-footer {
+    padding: 8px;
+  }
+}

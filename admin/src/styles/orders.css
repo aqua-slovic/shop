@@ -1,0 +1,248 @@
+.orders-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.orders-toolbar h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+
+.status-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-filter-btn {
+  padding: 6px 14px;
+  border: 2px solid var(--gray-200);
+  border-radius: 20px;
+  font-size: 13px;
+  background: white;
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.status-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.status-filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stats-summary-item {
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-summary-item span {
+  font-size: 13px;
+  color: var(--gray-500);
+}
+
+.stats-summary-item strong {
+  font-size: 24px;
+  color: var(--gray-900);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.order-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.order-number {
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.order-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-processing { background: #dbeafe; color: #1e40af; }
+.status-shipped { background: #ede9fe; color: #6d28d9; }
+.status-delivered { background: #d1fae5; color: #065f46; }
+.status-cancelled { background: #fee2e2; color: #991b1b; }
+
+.order-card-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.order-customer {
+  flex: 1;
+  min-width: 200px;
+}
+
+.order-customer strong {
+  display: block;
+  font-size: 15px;
+  color: var(--gray-800);
+  margin-bottom: 2px;
+}
+
+.order-customer span {
+  display: block;
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.order-items-count span {
+  font-size: 13px;
+  color: var(--gray-600);
+  font-weight: 500;
+}
+
+.order-total span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.order-date span {
+  font-size: 12px;
+  color: var(--gray-500);
+}
+
+.no-orders {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.no-orders h3 {
+  font-size: 20px;
+  color: var(--gray-800);
+  margin-bottom: 8px;
+}
+
+.no-orders p:last-child {
+  color: var(--gray-500);
+}
+
+.order-modal {
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.order-modal-status {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.status-pending { background: #fef3c7; color: #92400e; }
+
+.order-modal-section {
+  margin-bottom: 16px;
+}
+
+.order-modal-section h4 {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-500);
+  margin-bottom: 8px;
+}
+
+.order-modal-section p {
+  font-size: 14px;
+  color: var(--gray-700);
+  margin-bottom: 4px;
+}
+
+.order-modal-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.order-modal-totals {
+  margin-top: 12px;
+}
+
+.order-modal-totals div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+
+.order-modal-grand-total {
+  font-weight: 700;
+  font-size: 16px !important;
+  color: var(--gray-900) !important;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 2px solid var(--gray-100);
+}
+
+@media (max-width: 900px) {
+  .stats-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+}
